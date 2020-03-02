@@ -25,7 +25,7 @@ class Home extends Component {
 
     componentDidMount() {
         //send request to back end server
-        fetch('http://elbi-chan-api.herokuapp.com/find-threads-by-category?category=Personal')
+        fetch('https://elbi-chan-api.herokuapp.com/find-threads-by-category?category=Personal')
             .then(response => response.json())
             .then(body => {
                 //set value of state
@@ -43,7 +43,7 @@ class Home extends Component {
             author: ThreadAuthor,
             content: ThreadBody
         }, ()=> {
-            fetch('http://elbi-chan-api.herokuapp.com/add-thread', {
+            fetch('https://elbi-chan-api.herokuapp.com/add-thread', {
                 method: "POST",
                 mode: 'cors',
                 cache: 'no-cache',
